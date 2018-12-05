@@ -1,0 +1,16 @@
+{
+  "name": "dapp-chat-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ipfs": "^0.33.1",
+    "ipfs-api": "^26.1.2",
+    "ipfs-pubsub-room": "^1.4.0"
+  }
+}
