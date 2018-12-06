@@ -9,15 +9,22 @@ const ipfs = new IPFS({
     pubsub: true
   }, 
   config: {
-    Addresses: { 
-      Swarm: [ 
-        `/ip4/0.0.0.0/tcp/${4002+portOffset}`, 
-        `/ip4/127.0.0.1/tcp/${4003+portOffset}/ws` 
-      ], 
-      API: `/ip4/127.0.0.1/tcp/${5002+portOffset}`, 
-      Gateway: `/ip4/127.0.0.1/tcp/${9090+portOffset}`
+    Addresses: {
+      Swarm: [
+        '/dns4/ws-star.discovery.libp2p.io/tcp/443/wss/p2p-websocket-star'
+      ]
     }
   }
+  // config: {
+  //   Addresses: { 
+  //     Swarm: [ 
+  //       `/ip4/0.0.0.0/tcp/${4002+portOffset}`, 
+  //       `/ip4/127.0.0.1/tcp/${4003+portOffset}/ws` 
+  //     ], 
+  //     API: `/ip4/127.0.0.1/tcp/${5002+portOffset}`, 
+  //     Gateway: `/ip4/127.0.0.1/tcp/${9090+portOffset}`
+  //   }
+  // }
 })
 
 ipfs.once('ready', () => ipfs.id( (error, info) => {
